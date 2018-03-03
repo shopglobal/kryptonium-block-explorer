@@ -165,7 +165,7 @@ namespace xmreg
             {
                 mixin_str     = std::to_string(mixin_no);
                 fee_str       = fmt::format("{:0.6f}", xmr_amount);
-                fee_short_str = fmt::format("{:0.2f}", xmr_amount);
+                fee_short_str = fmt::format("{:0.3f}", xmr_amount);
             }
 
             const double& tx_size =  static_cast<double>(size)/1024.0;
@@ -178,8 +178,8 @@ namespace xmreg
                     {"tx_fee_short"      , fee_short_str},
                     {"sum_inputs"        , xmr_amount_to_str(xmr_inputs , "{:0.6f}")},
                     {"sum_outputs"       , xmr_amount_to_str(xmr_outputs, "{:0.6f}")},
-                    {"sum_inputs_short"  , xmr_amount_to_str(xmr_inputs , "{:0.2f}")},
-                    {"sum_outputs_short" , xmr_amount_to_str(xmr_outputs, "{:0.2f}")},
+                    {"sum_inputs_short"  , xmr_amount_to_str(xmr_inputs , "{:0.3f}")},
+                    {"sum_outputs_short" , xmr_amount_to_str(xmr_outputs, "{:0.3f}")},
                     {"no_inputs"         , static_cast<uint64_t>(input_key_imgs.size())},
                     {"no_outputs"        , static_cast<uint64_t>(output_pub_keys.size())},
                     {"no_nonrct_inputs"  , num_nonrct_inputs},
@@ -193,7 +193,7 @@ namespace xmreg
                     {"extra"             , get_extra_str()},
                     {"payment_id8"       , pod_to_hex(payment_id8)},
                     {"unlock_time"       , unlock_time},
-                    {"tx_size"           , fmt::format("{:0.2f}", tx_size)},
+                    {"tx_size"           , fmt::format("{:0.4f}", tx_size)},
                     {"tx_size_short"     , fmt::format("{:0.2f}", tx_size)}
             };
 
