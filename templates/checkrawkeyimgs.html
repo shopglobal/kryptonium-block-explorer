@@ -1,0 +1,69 @@
+
+<div>
+
+    <div class="center">
+        <br/>
+        <h3 class="center">Signed Key Images Checker</h3>
+    </div>
+
+
+    <h3>Data file prefix: {{data_prefix}}</h3>
+
+    {{#has_error}}
+        <h4 style="color:red">Attempt failed</h4>
+        <h4>{{error_msg}}</h4>
+    {{/has_error}}
+    {{^has_error}}
+        <h4>Key images for address: {{address}}</h4>
+        <h4>Viewkey: {{viewkey}}</h4>
+        {{#has_total_xmr}}
+            <h4>Total xmr: {{total_xmr}}</h4>
+        {{/has_total_xmr}}
+
+        <div class="center">
+
+            <form action="/genrawkeyimgs" method="post" style="width:100%; margin-top:15px" class="style-1">
+                <table class="center" style="width:80%">
+                    <tr>
+                        <td>Key no.</td>
+                        <td>Key image</td>
+                        <td>Timestamp</td>
+                        <td>RingCT</td>
+                        <td>Amount</td>
+                        <td>Is spent?</td>
+                    </tr>
+                    {{#key_imgs}}
+                    <input type="hidden" id="key_img_{{key_image}}" name="key_sig_pair_{{key_image}}" value="{{signature}}">
+                        <tr>
+                            <td>{{key_no}}</td>
+                            <td>
+                                {{#tx_hash_found}}
+                                    <a href="/tx/{{tx_hash}}">{{key_image}}</a>
+                                {{/tx_hash_found}}
+                                {{^tx_hash_found}}
+                                    {{key_image}}
+                                {{/tx_hash_found}}
+                            </td>
+                            <td>{{timestamp}}</td>
+                            <td>{{is_ringct}}</td>
+                            <td>{{amount}}</td>
+                            <td>
+                                {{#is_spent}}
+                                    <span style="color: #008009;font-weight: bold">{{is_spent}}</span>
+                                {{/is_spent}}
+                                {{^is_spent}}
+                                    {{is_spent}}
+                                {{/is_spent}}
+                            </td>
+                        </tr>
+                    {{/key_imgs}}
+                </table>
+                <br/>
+            <!--    <input type="submit" name="action" value="remove selected keys">-->
+            </form>
+
+        </div>
+
+    {{/has_error}}
+
+</div>
