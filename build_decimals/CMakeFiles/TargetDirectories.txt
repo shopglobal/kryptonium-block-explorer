@@ -1,0 +1,14 @@
+/root/electroneum-blockchain-explorer/build_decimals/CMakeFiles/edit_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/CMakeFiles/rebuild_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/CMakeFiles/xsmblocks.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/CMakeFiles/edit_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/CMakeFiles/rebuild_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/CMakeFiles/myext.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/mstch/CMakeFiles/edit_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/mstch/CMakeFiles/rebuild_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/mstch/src/CMakeFiles/edit_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/mstch/src/CMakeFiles/rebuild_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/ext/mstch/src/CMakeFiles/mstch.dir
+/root/electroneum-blockchain-explorer/build_decimals/src/CMakeFiles/edit_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/src/CMakeFiles/rebuild_cache.dir
+/root/electroneum-blockchain-explorer/build_decimals/src/CMakeFiles/myxrm.dir
