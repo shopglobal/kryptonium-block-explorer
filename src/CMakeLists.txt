@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(myxrm)
+project(mykryp)
 
 set(SOURCE_HEADERS
         MicroCore.h
